@@ -1,22 +1,57 @@
+// Pega os parâmetros enviados pela URL. Exemplo: resultado.html?cep=88500000&cidade=Lages
+
 const parametros = new URLSearchParams(window.location.search);
+
+// Pega o CEP da URL, se não existir, usa uma string vazia
+
 const cep = parametros.get("cep") || "";
+
+// Pega a cidade da URL
+
 const cidadeInformada = parametros.get("cidade") || "";
+
+// Pega os elementos HTML onde os resultados serão exibidos
+
 const resultado = document.getElementById("resultado");
 const linkMaps = document.getElementById("linkMaps");
+
+// Função usada para deixar textos em um formato padronizado
+
 function normalizar(texto) {
+
+// Remove acentos, transforma em letras minúsculas, e remove espaços extras
+
     return texto.normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
     .toLowerCase().trim().replace(/\s+/g, " ");
 }
+
+// Função responsável por criar uma linha de informação dentro da área de resultados
+
 function mostrarCampo(rotulo, valor) {
+
+// Cria elementos <p> e <strong>, e rotula de acordo com os dados inseridos
+
     const linha = document.createElement("p");
     const titulo = document.createElement("strong");
     titulo.textContent = `${rotulo}: `;
     linha.append(titulo, valor || "Não informado");
+
+// Adiciona a linha criada à área de resultados
+
     resultado.append(linha);
 }
+
+// Função assíncrona que consulta o CEP na API ViaCEP
+
 async function consultarEndereco() {
+
+// Esconde o link do Google Maps enquanto a consulta acontece
+
     linkMaps.hidden = true;
+
+ // Verifica se o CEP tem 8 números e se a cidade foi informada
+
     if (!/^\d{8}$/.test(cep) || !cidadeInformada.trim()) {
 
         resultado.classList.add("erroDados")
