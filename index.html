@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoTrack - Início</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>GeoTrack</h1>
+        <p>Conectando você a qualquer lugar</p>
+    </header>
+    <main>
+        <form id="formConsulta">
+            <h2>Consulta de Localização</h2>
+            <p>Insira os rótulos de CEP aqui:</p>
+            <label for="cep">CEP</label>
+            <input id="cep" type="text" inputmode="numeric" maxlength="9" placeholder="01001-000" required>
+            <label for="cidade">Cidade</label>
+            <input id="cidade" type="text" placeholder="São Paulo" required>
+            <p id="mensagem" role="status" aria-live="polite"></p>
+            <button type="submit">Consultar Endereço</button>
+        </form>
+    </main>
+    <footer>
+        <time datetime="2026">© GeoTrack 2026 - Paulo Filho.</time>
+    </footer>
+        <script src="index.js"></script>
+</body>
+</html>
