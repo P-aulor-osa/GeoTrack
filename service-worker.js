@@ -1,5 +1,5 @@
 // Nome do cache onde os arquivos do aplicativo serão armazenados.
-const CACHE_NAME = "geotrack-v1";
+const CACHE_NAME = "geotrack-v2";
 
 // Arquivos principais que queremos deixar disponíveis offline.
 const ARQUIVOS = [
