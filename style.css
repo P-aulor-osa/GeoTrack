@@ -1,3 +1,5 @@
+/* Adição de fontes Be Vietnam Pro e League Spartan */
+
 @font-face {
     font-family: "LeagueSpartan-Bold";
     src: url("LeagueSpartan-Bold.ttf");
@@ -8,6 +10,8 @@
     src: url("BeVietnamPro-Regular.ttf");
 }
 
+/* Estilização do cabeçalho */
+
 header {
     border: 2px solid white;
     background-color: #2c2c2c;
@@ -15,6 +19,8 @@ header {
     padding: 16px;
     box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.5);
 }
+
+/* Estilização da página principal */
 
 body {
     min-height: 100vh;
@@ -25,6 +31,8 @@ body {
     background-color: #2C64DC;
 }
 
+/* Estilização do título h1 do cabeçalho*/
+
 header h1 {
     font-family: "LeagueSpartan-Bold", sans-serif;
     color: white;
@@ -32,6 +40,8 @@ header h1 {
     font-size: 42px;
     margin: 0 0 10px 0;
 }
+
+/* Estilização do parágrafo de frase de efeito do cabeçalho*/
 
 header p {
     font-family: "BeVietnamPro-Regular", sans-serif;
@@ -41,11 +51,15 @@ header p {
     margin: 0;
 }
 
+/* Estilização da parte principal das páginas*/
+
 main {
     background-color: #2C64DC;
     padding: 30px 0;
     margin: 0;
 }
+
+/* Estilização do formulário em index.html*/
 
 form {
     width: 435px;
@@ -62,6 +76,8 @@ form {
     justify-content: center;
 }
 
+/* Estilização do título principal do formulário*/
+
 form h2 {
     font-family: "BeVietnamPro-Regular", sans-serif;
     color: white;
@@ -69,6 +85,8 @@ form h2 {
     font-size: 34px;
     margin: 0 0 35px 0;
 }
+
+/* Estilização do texto instrucional do formulário*/
 
 form p {
     font-family: "BeVietnamPro-Regular", sans-serif;
@@ -78,6 +96,8 @@ form p {
     margin: 0 0 25px 0;
 }
 
+/* Estilização do texto "CEP" e "Cidade" do formulário*/
+
 form label {
     font-family: "BeVietnamPro-Regular", sans-serif;
     color: white;
@@ -85,6 +105,8 @@ form label {
     font-size: 22px;
     margin-bottom: 15px;
 }
+
+/* Estilização das caixas de texto e texto de exemplo do formulário*/
 
 form input {
     width: 230px;
@@ -98,6 +120,8 @@ form input {
     padding: 5px;
 }
 
+/* Estilização do botão do formulário*/
+
 button {
     font-family: "BeVietnamPro-Regular", sans-serif;
     font-size: 18px;
@@ -109,6 +133,8 @@ button {
     padding: 12px 20px;
     cursor: pointer;
 }
+
+/* Estilização do rodapé das páginas*/
 
 footer {
     border: 2px solid white;
@@ -122,12 +148,7 @@ footer {
     
 }
 
-footer p {
-    font-family: "BeVietnamPro-Regular", sans-serif;
-    color: white;
-    -webkit-text-stroke: black 0.6px;
-    margin-bottom: 5px;
-}
+/* Estilização do texto do rodapé*/
 
 footer time {
     font-family: "BeVietnamPro-Regular", sans-serif;
@@ -135,9 +156,13 @@ footer time {
     -webkit-text-stroke: black 0.6px;
 }
 
+/* Estilização da mensagem de erro ao inserir CEP incorreto*/
+
 #mensagem {
     color: rgb(219, 25, 25)
 }
+
+/* Estilização do título da página resultado.htmk*/
 
 #titleResultado {
     font-family: "LeagueSpartan-Bold", sans-serif;
@@ -149,6 +174,8 @@ footer time {
     margin: 0 0 10px 0;
 
 }
+
+/* Estilização dos conteúdos puxados da API na página resultado.html*/
 
 #resultado {  
     font-family: "BeVietnamPro-Regular", sans-serif;
@@ -168,6 +195,8 @@ footer time {
     justify-content: center;
 }
 
+/* Estilização do diagnóstico de diversos erros */
+
 #resultado.erroInser, 
 #resultado.erroDados, 
 #resultado.erroCEP {
@@ -175,6 +204,8 @@ footer time {
     text-align: center;
     font-size: 18px;
 }
+
+/* Estilização do link atinente à localização consultada no Google Maps*/
 
 #linkMaps {
     display: block;
@@ -192,6 +223,8 @@ footer time {
     cursor: pointer;
 }
 
+/* Estilização do texto do botão de nova consulta*/
+
 #novaCons {
     text-align: center;
     font-family: "BeVietnamPro-Regular", sans-serif;
@@ -199,6 +232,8 @@ footer time {
     text-decoration: none;
     color: white
 }
+
+/* Estilização do container do botão de nova consulta*/
 
 #containerNova {
     display: flex;
@@ -213,6 +248,8 @@ footer time {
     padding: 12px 20px;
     cursor: pointer;
 }
+
+/* Ajustes para responsiviade em dispositivos móveis*/
 
 @media (max-width: 600px) {
 

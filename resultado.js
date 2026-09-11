@@ -124,3 +124,4 @@ async function consultarEndereco() {
     }
 }
 consultarEndereco();
+

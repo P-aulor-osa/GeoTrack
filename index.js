@@ -55,3 +55,13 @@ form.addEventListener("submit", (event) => {
 
     window.location.href = `resultado.html?${parametros}`;
 });
+
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("./service-worker.js")
+        .then(() => {
+            console.log("Service Worker registrado!");
+        })
+        .catch((erro) => {
+            console.error("Erro no Service Worker:", erro);
+        });
+}
